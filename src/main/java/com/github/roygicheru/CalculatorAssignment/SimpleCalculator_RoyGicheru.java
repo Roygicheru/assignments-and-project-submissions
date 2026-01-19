@@ -1,6 +1,7 @@
 package com.github.roygicheru.CalculatorAssignment;
 
 import java.util.Scanner;
+import com.github.roygicheru.App;
 
 /*
     * A simple calculator that adds two numbers provided by the user.
@@ -8,11 +9,11 @@ import java.util.Scanner;
  */
 public class SimpleCalculator_RoyGicheru {
     public void mainTask() {
-        Scanner scanner = new Scanner(System.in); // Create a Scanner object for user input
+        Scanner scanner = App.input; // Create a Scanner object for user input
 
         while (true) { //Loop to enable user to have multiple tries
-            
-            System.out.print("Enter first number or 0 to exit: "); //Prompt user for first number
+
+            System.out.print("\n\nEnter first number or 0 to exit: "); //Prompt user for first number
             /*  Loop to scan if user has entered any other value than the desired one (double),
             and helpfully inform and let them try again*/
             while (!scanner.hasNextDouble()) { // Loop to stop user from inputting undesired values
@@ -22,6 +23,7 @@ public class SimpleCalculator_RoyGicheru {
             }
             double num1 = scanner.nextDouble();//Read user input
             if (num1 == 0) { //Exit condition
+                scanner.nextLine(); // Clear the newline character
                 System.out.println("Exiting the calculator. Goodbye!");
                 break;
             }
@@ -34,7 +36,8 @@ public class SimpleCalculator_RoyGicheru {
             }
             double num2 = scanner.nextDouble();
             if (num2 == 0) {
-                System.out.println("Exiting the calculator. Goodbye!");
+                scanner.nextLine(); // Clear the newline character
+                System.out.println("\nExiting the calculator. Goodbye!");
                 break;
             }
 
@@ -93,6 +96,5 @@ public class SimpleCalculator_RoyGicheru {
                 }
             }
         }
-        scanner.close(); //Close the scanner to prevent resource leak
     }
 }
