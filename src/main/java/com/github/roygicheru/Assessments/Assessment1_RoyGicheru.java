@@ -1,8 +1,6 @@
-package com.github.roygicheru.Hello;
+package com.github.roygicheru.Assessments;
 
-
-
-public class Hello1 {
+public class Assessment1_RoyGicheru {
     public static void FirstMethod(){
         System.out.println("The area is: " + circleArea(7));
     }
@@ -11,5 +9,4 @@ public class Hello1 {
         double area = Math.PI * Math.pow(radius, 2);
         return area;
     }
-
 }

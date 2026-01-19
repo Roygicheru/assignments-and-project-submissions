@@ -6,7 +6,7 @@ import java.util.Scanner;
     * A simple calculator that adds two numbers provided by the user.
     @author Roy Gicheru
  */
-public class CalculatorAssignment1 {
+public class SimpleCalculator_RoyGicheru {
     public void mainTask() {
         Scanner scanner = new Scanner(System.in); // Create a Scanner object for user input
 
@@ -60,10 +60,10 @@ public class CalculatorAssignment1 {
                         System.out.println("\nThe sum is: " + (num1 + num2));
                         break;
                     case "2":
-                        if (num1 < 0 || num2 < 0) {
+                        if (num1 < 0 || num2 < 0) { // Check for negative numbers
                             System.out.println("Error: No negative numbers allowed!");
                         } 
-                        else if (num2 > num1) {
+                        else if (num2 > num1) { // Check if first number is larger
                             System.out.println("Error: The first number must be larger than the second!");
                         } 
                         else {
