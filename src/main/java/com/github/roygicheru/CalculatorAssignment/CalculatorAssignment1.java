@@ -1,4 +1,4 @@
-package com.github.roygicheru;
+package com.github.roygicheru.CalculatorAssignment;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ import java.util.Scanner;
     * A simple calculator that adds two numbers provided by the user.
     @author Roy Gicheru
  */
-public class CalculatorAssignment {
+public class CalculatorAssignment1 {
     public void mainTask() {
         Scanner scanner = new Scanner(System.in); // Create a Scanner object for user input
 
@@ -60,7 +60,16 @@ public class CalculatorAssignment {
                         System.out.println("\nThe sum is: " + (num1 + num2));
                         break;
                     case "2":
-                        System.out.println("\nThe difference is: " + (num1 - num2));
+                        if (num1 < 0 || num2 < 0) {
+                            System.out.println("Error: No negative numbers allowed!");
+                        } 
+                        else if (num2 > num1) {
+                            System.out.println("Error: The first number must be larger than the second!");
+                        } 
+                        else {
+                            // This only runs if BOTH conditions above were false
+                            System.out.println("\nThe difference is: " + (num1 - num2));
+                        }
                         break;
                     case "3":
                         System.out.println("\nThe product is: " + (num1 * num2));
