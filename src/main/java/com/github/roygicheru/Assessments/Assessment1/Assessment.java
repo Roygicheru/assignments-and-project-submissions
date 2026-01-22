@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /*
     * Assessment 1 containing 5 quizzes as methods.
-    @author Roy Gicheru
+    * @author Roy Gicheru
 */
 
 public class Assessment {
@@ -46,19 +46,22 @@ public class Assessment {
     }
 
     public static void quizOne(){ 
-        // 2. CHANGED: App.input -> input
-        Scanner scannerOne = input; 
-        System.out.println("\nEnter three numbers for calculations: ");
+        
+        Scanner scannerOne = input; // Used the global scanner
+        System.out.println("\nEnter three numbers for calculations: "); // Prompt for input
         while (!scannerOne.hasNextInt()) { 
-            System.out.println("Invalid input. Please enter a valid number.");
+            System.out.println("Invalid input. Please enter a valid number."); // Input validation
             scannerOne.next(); 
-            System.out.println("\nEnter three numbers for calculations: "); 
+            System.out.println("\nEnter three numbers for calculations: "); // Prompt again
         }
+
+        // Read three integers
         int a = scannerOne.nextInt();
         int b = scannerOne.nextInt();
         int c = scannerOne.nextInt();
-        scannerOne.nextLine(); 
+        scannerOne.nextLine(); // Clear the buffer
 
+        // Display results
         System.out.println("\nYou entered: "+ a + ", " + b + ", " + c);
         System.out.println("\nThe sum is: " + (a + b + c));
         System.out.println("The product is: " + (a * b * c));
@@ -67,19 +70,22 @@ public class Assessment {
     }
     
     public static void quizTwo(){ 
-        // 2. CHANGED: App.input -> input
-        Scanner scannerTwo = input;
+        Scanner scannerTwo = input; // Used the global scanner
 
+        // Loop for continuous input
         while (true) {
         System.out.print("\nEnter student score or 0 to exit: ");
+
+        // Input validation, only integers
         while (!scannerTwo.hasNextInt()) { 
             System.out.println("Invalid input. Please enter a valid number.");
             scannerTwo.next(); 
             System.out.print("\nEnter student score or 0 to exit: "); 
         }
-        int score = scannerTwo.nextInt();
-        scannerTwo.nextLine(); 
+        int score = scannerTwo.nextInt(); // Read score
+        scannerTwo.nextLine(); // Clear buffer
 
+        // Grade determination
         if(score < 0 || score > 100){ 
             System.out.println("Invalid score");
             continue;
@@ -94,7 +100,7 @@ public class Assessment {
                 System.out.println("Grade: D");
             } else if (score == 0){
                 System.out.println("Exiting quiz two, goodbye!");
-                return; 
+                return; // Exit the method
             }
             else {
                 System.out.println("Grade: F");
@@ -104,14 +110,14 @@ public class Assessment {
     }
 
     public static void quizThree(){ 
-        for(int i = 1; i <= 20; i++){ 
-            if (i % 2 == 0) { 
+        for(int i = 1; i <= 20; i++){  // Loop from 1 to 20
+            if (i % 2 == 0) { // Check for even numbers and multiples of 5
                 if (i % 5 == 0){ 
                     System.out.println(i + " - Even, Multiple of 5");
                 } else{
                     System.out.println(i + " - Even");
                 }
-            } else if (i % 2 != 0){ 
+            } else if (i % 2 != 0){ // Check for odd numbers and multiples of 5
                 if (i % 5 == 0){ 
                     System.out.println(i + " - Odd, Multiple of 5");
                 } else{
@@ -122,27 +128,29 @@ public class Assessment {
     }
 
     public static void quizFour(){ 
-        // 2. CHANGED: App.input -> input
-        Scanner scannerThree = input;
-        while (true){
+
+        Scanner scannerThree = input; // Used the global scanner
+
+        while (true){ // Loop for continuous input
             System.out.print("\nEnter a positive integer, or 0 to exit: ");
-            while (!scannerThree.hasNextInt()) { 
+
+            while (!scannerThree.hasNextInt()) { // Input validation only integers
                 System.out.println("Invalid input. Please enter a valid number.");
                 scannerThree.next(); 
                 System.out.print("\nEnter a positive integer, or 0 to exit: "); 
             }
-            int number = scannerThree.nextInt();
-            scannerThree.nextLine(); 
+            int number = scannerThree.nextInt(); // Read the integer
+            scannerThree.nextLine(); // Clear buffer
 
-            if (number == 0) {
+            if (number == 0) { // Exit condition
                 System.out.println("\nExiting quiz four, goodbye!");
-                return;
-            } else if (number < 0 || number > 12){ 
+                return; // Exit the method
+            } else if (number < 0 || number > 12){ // Validate positive integers within range
                 System.out.println("Please enter positive integers only (0-12).");
-                continue;
+                continue; // Continue loop
             } else {
                 int result = 1;
-                for (int i = 1; i <= number; i++){ 
+                for (int i = 1; i <= number; i++){ // Calculate factorial
                     result *= i;
                 }
                 System.out.println("Factorial of "+ number + " is: " + result);
@@ -153,11 +161,11 @@ public class Assessment {
 
     public static void quizFive(){ 
         System.out.println("\nPrinting a right angled triangle consisting of stars:");
-        for(int i = 0; i < 5; i++){ 
-            for(int j = 0; j <= i; j++){ 
-                System.out.print("*"); 
+        for(int i = 0; i < 5; i++){ // Outer loop for rows
+            for(int j = 0; j <= i; j++){ // Inner loop for columns
+                System.out.print("*"); // Print star
             }
-            System.out.println(""); 
+            System.out.println(""); // New line after each row
         }
     }
 }
