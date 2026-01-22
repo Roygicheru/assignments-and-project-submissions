@@ -9,12 +9,13 @@ import java.util.Scanner;
 
 public class Assessment {
 
-    public static final Scanner input = new Scanner(System.in);
+    public static final Scanner input = new Scanner(System.in); // Global scanner for all methods
 
     public static void runAssessmentMenu() { 
-        Scanner menuScanner = new Scanner(System.in); 
-        boolean backToMain = false;
+        Scanner menuScanner = input; // Use the global scanner
+        boolean backToMain = false; // Control variable for the menu loop
         
+        // Main menu loop
         while (!backToMain) {
             System.out.println("\n--- Assessment 1 Quizzes ---");
             System.out.println("1. Quiz One");
