@@ -1,15 +1,17 @@
-package com.github.roygicheru.CalculatorAssignment;
+package com.github.roygicheru.Exercises.CalculatorAssignment;
 
 import java.util.Scanner;
-import com.github.roygicheru.App;
 
 /*
     * A simple calculator that adds two numbers provided by the user.
     @author Roy Gicheru
  */
-public class SimpleCalculator_RoyGicheru {
-    public void mainTask() {
-        Scanner scanner = App.input; // Create a Scanner object for user input
+public class SimpleCalculator {
+
+    public static final Scanner input = new Scanner(System.in);
+
+    public static void mainTask() {
+        Scanner scanner = input; // Create a Scanner object for user input
 
         while (true) { //Loop to enable user to have multiple tries
 
@@ -38,6 +40,7 @@ public class SimpleCalculator_RoyGicheru {
             if (num2 == 0) {
                 scanner.nextLine(); // Clear the newline character
                 System.out.println("\nExiting the calculator. Goodbye!");
+                scanner.close();
                 break;
             }
 
@@ -98,3 +101,4 @@ public class SimpleCalculator_RoyGicheru {
         }
     }
 }
+
