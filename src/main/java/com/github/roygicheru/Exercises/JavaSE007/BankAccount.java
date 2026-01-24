@@ -3,6 +3,12 @@ package com.github.roygicheru.Exercises.JavaSE007;
 /**
  * A class representing a bank account with basic operations.
  * @author Roy Gicheru
+ * Features:
+ * 1. Made instance variables private to ensure encapsulation.
+ * 2. Create a bank account with account number, account holder name and initial balance.
+ * 3. Deposit money to the account.
+ * 4. Withdraw money from the account.
+ * 5. Display a summary of all details.
  */
 
 public class BankAccount {
