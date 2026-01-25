@@ -1,5 +1,9 @@
 package com.github.roygicheru.Assessments.Assessment2_RoyGicheru.Quiz3;
 
+/* This is a project meant to demonstrate method overloading and overriding
+    * using a Calculator and ScientificCalculator classes.
+    *@author Roy Gicheru
+ */
 public class Quiz3Main {
     public static void main(String[] args){
         Calculator calc = new Calculator();

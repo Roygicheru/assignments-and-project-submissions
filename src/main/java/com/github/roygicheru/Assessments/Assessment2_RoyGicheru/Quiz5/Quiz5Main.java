@@ -1,5 +1,10 @@
 package com.github.roygicheru.Assessments.Assessment2_RoyGicheru.Quiz5;
 
+/* This is a quiz on Java OOP concepts
+    * consisting of five questions and answers,
+    * along with code examples for each concept.
+    *@author Roy Gicheru
+ */
 public class Quiz5Main {
     public void questionOne(){
         System.out.println("\n================================================================================");

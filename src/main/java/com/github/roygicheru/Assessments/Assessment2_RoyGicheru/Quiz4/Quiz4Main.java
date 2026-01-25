@@ -1,5 +1,10 @@
 package com.github.roygicheru.Assessments.Assessment2_RoyGicheru.Quiz4;
 
+/* This is a project meant to demonstrate inheritance
+    * with a Bank account system consisting of a base Bank class
+    * and two derived classes: CheckingAccount and SavingsAccount.
+    *@author Roy Gicheru
+ */
 public class Quiz4Main {
     public static void main(String[] args){
         Bank bankAccount = new Bank("a1b2c3", "Roy Gicheru", 2000.0);
