@@ -1,5 +1,11 @@
 package com.github.roygicheru.Assessments.Assessment3_RoyGicheru.Problem1;
 
+/* This is a project meant to demonstrate:
+ * Inheritance by creating a base class LibraryItem and derived classes Book, DVD, and Magazine.
+ * Polymorphism by overriding methods in the derived classes to show different behaviors.
+ *@author Roy Gicheru
+ */
+
 public class LibraryManagementSystemMain {
     public static void main(String[] args){
         // Your solution should demonstrate:
