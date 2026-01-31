@@ -1,4 +1,4 @@
-package com.github.roygicheru.Assessments.Assessment1;
+package com.github.roygicheru.Assessments.Assessment1_RoyGicheru;
 
 import java.util.Scanner;
 

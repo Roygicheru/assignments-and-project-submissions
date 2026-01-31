@@ -1,16 +1,15 @@
-package com.github.roygicheru.Assessments.Assessment2_RoyGicheru.Quiz1;
+package com.github.roygicheru.Assessments.Assessment3_RoyGicheru.Problem1;
 
-public class Book {
+public class LibraryItem {
     private String title;
     private String author;
     private String itemId;
-    private boolean isAvailable;
+    private boolean isAvailable = true;
 
-    public Book(String title, String author, String itemId, boolean isAvailable) {
+    public LibraryItem(String title, String author, String itemId) {
         setTitle(title);
         setAuthor(author);
         setItemId(itemId);
-        setAvailable(isAvailable);
     }
 
     public String getTitle() { return title;}
@@ -46,16 +45,16 @@ public class Book {
         this.isAvailable = isAvailable;
     }
 
-    public void borrowBook(){
+    public void checkOut(){
         if (isAvailable) {
             setAvailable(false);
-            System.out.println("You have successfully borrowed the book: " + getTitle() + " of author " + getAuthor() + " with Item ID " + getItemId() + ".");
+            System.out.println("You have successfully checked out: " + getTitle() + " of author " + getAuthor() + " with Item ID " + getItemId() + ".");
         } else {
-            System.out.println("Book is not available.");
+            System.out.println("Library item is not available.");
         }
     }
 
-    public void returnBook(){
+    public void returnItem(){
         setAvailable(true);
         System.out.println("You have successfully returned the book: " + getTitle() + " of author " + getAuthor() + " with Item ID " + getItemId() + ".");
     }
