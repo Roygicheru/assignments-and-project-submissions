@@ -8,7 +8,6 @@ package com.github.roygicheru.Assessments.Assessment3_RoyGicheru.Problem1;
 
 public class LibraryManagementSystemMain {
     public static void main(String[] args){
-        // Your solution should demonstrate:
         LibraryItem[] items = {
         new Book("B001", "Java Programming", "John Doe", "123-4567890123", "Education"),
         new DVD("D001", "Java Tutorial", "Jane Smith", 120, "PG"),
