@@ -55,6 +55,7 @@ public class Analysis_RoyGicheru {
         empMgmt.setSalary(50000.0);
         double bonus = empMgmt.calculateBonus();
         System.out.println(Analysis_RoyGicheru.companyName);
-        System.out.println("Latest salary: " + (empMgmt.getSalary() + bonus));
+        System.out.println("Original salary: " + empMgmt.getSalary());
+        System.out.println("Salary with bonus: " + (empMgmt.getSalary() + bonus));
     }
 }
