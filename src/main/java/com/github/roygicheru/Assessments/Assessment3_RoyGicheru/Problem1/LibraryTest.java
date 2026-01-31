@@ -6,7 +6,7 @@ package com.github.roygicheru.Assessments.Assessment3_RoyGicheru.Problem1;
  *@author Roy Gicheru
  */
 
-public class LibraryManagementSystemMain {
+public class LibraryTest {
     public static void main(String[] args){
         LibraryItem[] items = {
         new Book("B001", "Java Programming", "John Doe", "123-4567890123", "Education"),
