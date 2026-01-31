@@ -1,5 +1,7 @@
 package com.github.roygicheru.Assessments.Assessment3_RoyGicheru.Problem2;
 
-public class AccountNotFoundException {
-    
+public class AccountNotFoundException extends Exception {
+    public AccountNotFoundException(String message){
+        super(message);
+    }
 }
