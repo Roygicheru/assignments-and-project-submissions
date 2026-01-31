@@ -15,8 +15,8 @@ public class LibraryManagementSystemMain {
         };
         // Polymorphic behavior
         for (LibraryItem item : items) {
-        item.displayDetails(); // Each should show different information
-        item.checkOut(); // Each might have different checkout logic
+        item.displayDetails();
+        item.checkOut();
         }
     }
 }
