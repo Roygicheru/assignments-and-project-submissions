@@ -59,17 +59,33 @@ public class BankAccount {
                 throw new InsufficientFundsException("Insufficient funds for withdrawal of: "+ withdrawAmount);
             }
         } else {
-            throw new InvalidTransactionException("Invalid withdrawal amount: " + withdrawAmount);
+            throw new InvalidTransactionException("Invalid withdrawal amount: " + withdrawAmount + ", amount must be greater than zero");
         }
     }
 
+    // Method to get account number
+    public String getAccountNumber() {
+        return this.accountNumber;
+    }
+
+    // Method to get account holder name
+    public String getAccountHolder() {
+        return this.accountHolder;
+    }
+
+    // Method to get current balance
+    public double getBalance() {
+        return this.balance;
+    }
+
+    // Method to transfer money to another account
     public void transfer(String targetAccountNumber, double transferAmount) throws AccountNotFoundException, InsufficientFundsException, InvalidTransactionException {
-        if (targetAccountNumber == null || targetAccountNumber.isEmpty() || targetAccountNumber == "INVALID") {
-            throw new AccountNotFoundException("Target account number is invalid." );
-        }else if (transferAmount <= 0) {
-            throw new InvalidTransactionException("Transfer amount must be positive; cannot transfer: " + transferAmount);
-        }else if (this.balance < transferAmount) {
-            throw new InsufficientFundsException("Insufficient funds for transfer of: " + transferAmount);
+        if (targetAccountNumber == null || targetAccountNumber.isEmpty() || targetAccountNumber.equals("INVALID")) {
+            throw new AccountNotFoundException("Target account is invalid.");
+        } else if (transferAmount <= 0) {
+            throw new InvalidTransactionException("Invalid transfer amount: " + transferAmount + ", amount must be greater than zero");
+        } else if (this.balance < transferAmount) {
+            throw new InsufficientFundsException("Insufficient funds for transfer of amount: " + transferAmount + " to account number: " + targetAccountNumber);
         }
         this.balance -= transferAmount;
         System.out.println("Transferred: " + transferAmount + " to account number: " + targetAccountNumber);
